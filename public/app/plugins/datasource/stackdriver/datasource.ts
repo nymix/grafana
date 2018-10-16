@@ -113,6 +113,7 @@ export default class StackdriverDatasource {
         if (!queryRes.series) {
           return;
         }
+
         const unit = this.resolvePanelUnitFromTargets(options.targets);
         queryRes.series.forEach(series => {
           result.push({
